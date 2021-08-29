@@ -1,0 +1,31 @@
+{
+  "name": "node.js-backend-app-structure",
+  "version": "1.0.0",
+  "description": "A development structure for creating a Node backend for your need.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon ./src/index.js",
+    "start": "NODE_ENV=production node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suraj-bharti/Node.js-backend-app-structure.git"
+  },
+  "author": "Suraj Bharti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suraj-bharti/Node.js-backend-app-structure/issues"
+  },
+  "homepage": "https://github.com/suraj-bharti/Node.js-backend-app-structure#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
