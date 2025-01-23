@@ -16,4 +16,4 @@ npm run dev
 npm run start
 ```
 ## Packages Used
-For a detailed list of packages used in this project, refer to the [PACKAGES USED](./PACKAGE USED.md) file.
+For a detailed list of packages used in this project, refer to the [PACKAGES USED](./PACKAGE-USED.md) file.
