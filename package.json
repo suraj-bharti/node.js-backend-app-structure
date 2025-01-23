@@ -1,11 +1,12 @@
 {
   "name": "node.js-backend-app-structure",
   "version": "1.0.0",
-  "description": "A development structure for creating a Node backend for your need.",
+  "description": "Node.js backend app structure with express, mongodb, mysql, jwt, cors, helmet, morgan and dotenv packages. This is a basic structure for a Node.js backend application.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev nodemon ./src/index.js",
-    "start": "NODE_ENV=production node ./src/index.js"
+    "dev": "NODE_ENV=dev nodemon ./src/app.js",
+    "start": "NODE_ENV=production node ./src/app.js",
+    "test": "NODE_ENV=test nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +20,12 @@
   "homepage": "https://github.com/suraj-bharti/Node.js-backend-app-structure#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.12.0",
+    "morgan": "^1.10.0",
     "mysql": "^2.18.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
   }
 }

@@ -3,7 +3,7 @@
 module.exports = (app) => {
     if (!app) return;
     
-    const port = process.env.PORT || '3000';
+    const PORT = process.env.PORT || '3000';
 
     // To start server with mysql uncomment this.
     // const startDB = require('../config/mysql')
@@ -13,8 +13,8 @@ module.exports = (app) => {
     // const mdb = require('../config/mongodb')
     // global.mdb = mdb;
 
-    app.listen(port, () => {
-        console.log(`Server (${process.env.NODE_ENV}) started at http://localhost:${port}`);
+    app.listen(PORT, () => {
+        console.log(`Server (${process.env.NODE_ENV}) started at http://localhost:${PORT}`);
     });
 
 };

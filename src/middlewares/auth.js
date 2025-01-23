@@ -10,9 +10,9 @@ module.exports = (req, res, next) => {
 			let payload = jwt.verify(token, jwt_key);
 			next();
 		}else{
-			res.status(401).send({code:402, 'error':'Invalid token'});
+			res.status(401).send('Access denied.');
 		}
 	} catch (err) {
-		res.status(401).send({code:403, 'error':'Access to this resource on the server is denied!'});
+		res.status(403).send('Invalid token.');
 	}
 }

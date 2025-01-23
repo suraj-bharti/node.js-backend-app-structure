@@ -1,7 +1,7 @@
 'use strict'
 
 const jwt = require('jsonwebtoken');
-const jwt_key = process.env.JWT_KEY;
+const JWT_KEY = process.env.JWT_KEY;
 
 const UserModel = require('../models/users')
 
@@ -26,13 +26,14 @@ class UserController {
     }
 
     async login(req, res) {
+        
         try {
             const {email, password} = req.body
             const result = await UserModel.login(email, password);
-
             if(result) {
                 let user = Object.assign({}, result)
-                user.token = jwt.sign({email: user.email, user_id: user.id}, jwt_key, {expiresIn: "7d"});
+                
+                user.token = jwt.sign({email: user.email, user_id: user.id}, JWT_KEY, {expiresIn: "15m"});
                 res.send({success: true, data: user})
             } else {
                 return Promise.reject({message: 'You have entered wrong credentials.'})

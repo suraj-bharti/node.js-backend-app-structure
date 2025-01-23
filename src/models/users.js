@@ -7,7 +7,7 @@ class UserModel {
             const results = await db.query("SELECT * FROM users LIMIT 10");
             return results;
         } catch (err) {
-            Promise.reject(err)
+            return Promise.reject(err)
         }
     }
 
@@ -20,14 +20,14 @@ class UserModel {
                 return Promise.reject('User does not exists.')
             }
         } catch (err) {
-            Promise.reject(err)
+            return Promise.reject(err)
         }
     }
 
     async login(email, password) {
         try {
             // const results = await readDB.query("SELECT * FROM users WHERE user_id=?;", ...[user_id]);
-            if(email == 'test@gmail.com' && password == 'test') {
+            if(email === 'test@gmail.com' && password === 'test') {
                 const result = {
                     id: 1,
                     name: 'Suraj Bharti',
@@ -38,7 +38,7 @@ class UserModel {
                 return Promise.reject('Authentication faild.')
             }
         } catch (err) {
-            Promise.reject(err)
+            return Promise.reject(err)
         }
     }
 
